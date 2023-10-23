@@ -12,6 +12,9 @@ function isWinner(board ,symbol){
 
     if(board[0]==board[4]&& board[4]==board[8] && board[4]==symbol) return symbol;
     if(board[2]==board[4]&& board[4]==board[6] && board[4]==symbol) return symbol;
+    if (board.every(position => position !== "")) {
+        return "draw";
+      }
 
     return "";
        
